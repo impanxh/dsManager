@@ -1,0 +1,133 @@
+.center {
+	margin: auto;
+}
+
+.frame {
+	width: 1000px;
+}
+
+.div {
+	text-align: center;
+	margin: 20px;
+}
+
+.processed {
+	color: limegreen;
+}
+
+.invalid {
+	color: red;
+}
+
+.tableTr {
+	margin-top: 20px;
+}
+
+#table,#his_table {
+	text-align: left;
+	font-size: 15px;
+	float: left;
+	border-collapse: collapse;
+	margin-bottom: 17px;
+}
+
+#table .hl,#his_table .hl {
+	background-color: #ffff00;
+}
+
+#table th,#his_table th {
+	background-color: #3bafda;
+	color: white;
+	font-weight: normal;
+	text-align: left;
+	line-height: 30px;
+	border-left: solid 1px #fff;
+}
+
+#table_report th{
+	background-color: #3bafda;
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #666;
+	width: 22%;
+}
+
+#table_report td{
+	font-weight: normal;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #666;
+}
+
+div#toolbar {
+	float: left;
+	margin: 5px;
+	padding: 10px 0 10px 0;
+}
+div#toolbar input {
+	height: 30px;
+	border-radius: 2px;
+	border: 1px solid #C5C5C5;
+	width: 160px;
+}
+
+div#toolbar2 {
+	float: left;
+	margin: 5px;
+	padding: 10px 0 10px 0;
+}
+div#toolbar2 input {
+	height: 30px;
+	border-radius: 2px;
+	border: 1px solid #C5C5C5;
+}
+div#table_length {
+	float: right;
+	padding: 10px 0 10px;
+}
+
+div#table2_length {
+	float: right;
+	padding: 10px 0 10px;
+}
+
+table.dataTable td,table.dataTable th {
+	//text-align: left;
+}
+
+.align-left {
+	text-align: left !important;
+}
+
+.align-right {
+	text-align: right !important;
+}
+
+div.DTTT_container {
+    margin: 14px 0;
+}
+
+ .div.dataTables_wrapper {
+        margin: 0 auto;
+    }
+th, td { white-space: nowrap;}
+
+#ctable td{
+	word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.break {
+	word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+#planTableOfPlan td{
+	word-break: break-all;
+    white-space: normal;
+    word-wrap: break-word;
+}

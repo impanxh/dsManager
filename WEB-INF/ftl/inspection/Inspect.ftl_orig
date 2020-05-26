@@ -1,0 +1,384 @@
+<#assign security=JspTaglibs["/WEB-INF/tlds/security.tld"] />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>检查</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 引入YDUI样式 -->
+    <link rel="stylesheet" href="${rc.contextPath}/ydui_css/ydui.css" />
+    <link rel="stylesheet" href="${rc.contextPath}/css/demo.css" />
+    <!-- 引入jQuery 2.0+ -->
+<script src="${rc.contextPath}/js/jquery-2.0.2.min.js"></script>
+    <!-- 引入YDUI自适应解决方案类库 -->
+    <script src="${rc.contextPath}/ydui_js/ydui.flexible.js"></script>
+    <script src="${rc.contextPath}/js/address.js"></script>
+    <script src="${rc.contextPath}/js/common.js"></script>
+        <!-- 引入YDUI脚本 -->
+<script type="text/javascript" language="javascript"
+    src="${rc.contextPath}/js/vue.min.js"></script>
+<script src="${rc.contextPath}/ydui_js/template.js"></script>
+<script src="${rc.contextPath}/ydui_js/ydui.js"></script>
+<script src="${rc.contextPath}/ydui_js/ydui-list.js"></script>
+<script src="${rc.contextPath}/js/jquery.cookie.js"></script>
+
+
+</head>
+<body>
+<section class="g-flexview">
+    <header class="m-navbar">
+        <a href="javascript:history.back(-1);" class="navbar-item" id="navbarBack"><i class="back-ico"></i></a>
+        <div class="navbar-center"><span class="navbar-title" id="unitTitle"></span></div>
+    </header>
+
+    <section class="g-scrollview" id="J_List">
+        <h1 class="demo-pagetitle">单位主体责任检查</h1>
+        <h2 class="demo-detail-title"></h2>
+
+        <input type="hidden" id="unitId"/>
+        <div class="m-list list-theme1" id="Inspection">
+            <div class="m-cell" id="personPrecaution">
+                <a href="javascript:void(0)" class="cell-item link">
+                    <div class="cell-left">人防管理</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <!-- 二级菜单 -->
+                <div class="submenu">
+                    <template v-for="(p,index) in ppList">
+                    <span class="link2" v-on:click="myDropDown(p.id)">
+                    <a href="javascript:void(0)" class="cell-item menu2">
+                        <label class="cell-left" style="white-space:normal">{{index+1}}.{{p.s_Map.itemName_s}}</label>
+                         <label class="cell-right">
+                            <input type="checkbox" v-model="checkedPP" v-bind:value="p.id" v-on:click="raiseIssue(p.id)"/>
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </a>
+                    </span>
+
+                    <!-- 三级菜单 -->
+                    <div class="cell-item" v-bind:id="'SUBMENU'+ p.id" style="display:none">
+                        <label class="cell-left menu3">{{p.s_Map.detailDesc_s}}</label>
+                        <div class="m-list list-theme4">
+                            <div class="list-image" v-if="p.s_Map.mediaFile_s != null">
+                                <template v-for="img in p.s_Map.mediaFile_s.split(',')">
+                                    <img v-bind:name="'IMG'+p.id" v-bind:lazy-src="'/upload_temp/'+ img" />
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-item" v-bind:id="'COMMENTS' + p.id" style="display:none">
+                        <textarea  class="cell-textarea" v-on:change="comment(p.id, $event)">未落实规定措施。</textarea>
+                    </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="m-cell" id="equipPrecaution">
+                <a href="javascript:void(0)" class="cell-item link">
+                    <div class="cell-left">物防管理</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <!-- 二级菜单 -->
+                <div class="submenu">
+                    <template v-for="(e,index) in epList">
+                    <span class="link2" v-on:click="myDropDown(e.id)">
+                    <a href="javascript:void(0)" class="cell-item menu2">
+                        <label class="cell-left" style="white-space:normal">{{index+1}}.{{e.s_Map.itemName_s}}</label>
+                        <label class="cell-right">
+                            <input type="checkbox" v-model="checkedEP" v-bind:value="e.id" v-on:click="raiseIssue(e.id)"/>
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </a>
+
+                    </span>
+
+                    <!-- 三级菜单 -->
+                    <div class="cell-item" v-bind:id="'SUBMENU' + e.id" style="display: none">
+                        <label class="cell-left menu3">{{e.s_Map.detailDesc_s}}</label>
+                        <div class="m-list list-theme4">
+                        <div class="list-image" v-if="e.s_Map.mediaFile_s != null">
+                            <template v-for="img in e.s_Map.mediaFile_s.split(',')">
+                            <img v-bind:name="'IMG'+e.id" v-bind:lazy-src="'/upload_temp/'+ img" />
+                            </template>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="cell-item" v-bind:id="'COMMENTS' + e.id" style="display:none">
+                        <textarea class="cell-textarea" v-on:change="comment(e.id, $event)">未落实规定措施。</textarea>
+                    </div>
+                    </template>
+                </div>
+            </div>
+            <div class="m-cell" id="techPrecaution">
+                <a href="javascript:void(0)" class="cell-item link">
+                    <div class="cell-left">技防管理</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <!-- 二级菜单 -->
+                <div class="submenu">
+                    <template v-for="(t,index) in tpList">
+                    <span class="link2" v-on:click="myDropDown(t.id)">
+                    <a href="javascript:void(0)" class="cell-item menu2">
+                        <label class="cell-left" style="white-space:normal">{{index+1}}.{{t.s_Map.itemName_s}}</label>
+                        <label class="cell-right">
+                            <input type="checkbox" v-model="checkedTP" v-bind:value="t.id" v-on:click="raiseIssue(t.id)"/>
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </a>
+
+                    </span>
+
+                        <!-- 三级菜单 -->
+                        <div class="cell-item" v-bind:id="'SUBMENU' + t.id" style="display: none">
+                            <label class="cell-left menu3">{{t.s_Map.detailDesc_s}}</label>
+                            <div class="m-list list-theme4">
+                                <div class="list-image" v-if="t.s_Map.mediaFile_s != null">
+                                    <template v-for="img in t.s_Map.mediaFile_s.split(',')">
+                                        <img v-bind:name="'IMG'+t.id" v-bind:lazy-src="'/upload_temp/'+ img" />
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-item" v-bind:id="'COMMENTS' + t.id" style="display:none">
+                            <textarea class="cell-textarea" v-on:change="comment(t.id, $event)">未落实规定措施。</textarea>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="m-cell" id="mindPrecaution">
+                <a href="javascript:void(0)" class="cell-item link">
+                    <div class="cell-left">心防管理</div>
+                    <div class="cell-right cell-arrow"></div>
+                </a>
+                <!-- 二级菜单 -->
+                <div class="submenu">
+                    <template v-for="(m,index) in mpList">
+                    <span class="link2" v-on:click="myDropDown(m.id)">
+                    <a href="javascript:void(0)" class="cell-item menu2">
+                        <label class="cell-left" style="white-space:normal">{{index+1}}.{{m.s_Map.itemName_s}}</label>
+                        <label class="cell-right">
+                            <input type="checkbox" v-model="checkedMP" v-bind:value="m.id" v-on:click="raiseIssue(m.id)"/>
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </a>
+
+                    </span>
+
+                        <!-- 三级菜单 -->
+                        <div class="cell-item" v-bind:id="'SUBMENU' +m.id" style="display: none">
+                            <label class="cell-left menu3">{{m.s_Map.detailDesc_s}}</label>
+                            <div class="m-list list-theme4">
+                                <div class="list-image" v-if="m.s_Map.mediaFile_s != null">
+                                    <template v-for="img in m.s_Map.mediaFile_s.split(',')">
+                                        <img v-bind:name="'IMG'+m.id" v-bind:lazy-src="'/upload_temp/'+ img" />
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-item" v-bind:id="'COMMENTS' + m.id" style="display:none">
+                            <textarea class="cell-textarea" v-on:change="comment(m.id, $event)">未落实规定措施。</textarea>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <footer class="m-tabbar tabbar-fixed">
+                <div class="m-button" style="width: 100%;">
+                    <button type="button" id="submitBtn" class="btn-block btn-primary" v-on:click="submit">提交检查</button>
+                </div>
+            </footer>
+        </div>
+    </section>
+</section>
+
+<script src="${rc.contextPath}/js/jquery.form.js"></script>
+<script src="${rc.contextPath}/js/preCaution.js"></script>
+<!-- 引入city包 -->
+<script src="${rc.contextPath}/ydui_js/ydui.citys.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var unitId = getQueryString("unit");
+        var userType = 1;
+        var user = queryUserGroup('<@security.authentication property="principal.username" />');
+        if(isNotNull(user[1])){
+            if(user[1] != "*") {
+                userType = 2;
+            }
+        } else {
+            userType = 3;
+        }
+        var myUnit = getUnitById(unitId);
+        if(myUnit == null) {
+            window.location.href = "${rc.contextPath}/hyList"
+        }
+        $("#unitId").val(unitId);
+        $("#unitTitle").text(myUnit.s_Map.unitName_s);
+
+        var inspVue = new Vue({
+            el: '#Inspection',
+            data: {
+                unit: myUnit,
+                ppList: [],
+                epList: [],
+                tpList: [],
+                mpList: [],
+                checkedPP: [],
+                checkedEP: [],
+                checkedTP: [],
+                checkedMP: [],
+                issueComments: {},
+            },
+            mounted: function(){
+                this.$nextTick(function() {
+                    this.showData();
+                })
+            },
+            methods: {
+                showData: function () {
+                    var _self = this;
+                    _self.ppList = getPrecautionItems(unitId, "PersonPrecaution");
+                    _self.epList = getPrecautionItems(unitId, "EquipPrecaution");
+                    _self.tpList = getPrecautionItems(unitId, "TechPrecaution");
+                    _self.mpList = getPrecautionItems(unitId, "MindPrecaution");
+                },
+                myDropDown: function(inspId) {
+                    var subNode = document.getElementById("SUBMENU"+inspId);
+                    if(subNode.style.display == "none") {
+                        subNode.style.display = "block";
+
+                        var imgs = document.getElementsByName("IMG"+inspId);
+                        for(var i=0;i<imgs.length;i++) {
+                            var _src = imgs[i].getAttribute('lazy-src');
+                            if(_src !== imgs[i].src){
+                                imgs[i].src = _src;}
+                        }
+                    } else {
+                        subNode.style.display = "none";
+                    };
+                    //e.currentTarget.parentNode.toggleClass('open');
+                },
+                raiseIssue: function(inspId) {
+                   var commentsNode =  document.getElementById("COMMENTS"+inspId);
+                    if(commentsNode.style.display == "none") {
+                        commentsNode.style.display = "block";
+                    } else {
+                        commentsNode.style.display = "none";
+                    };
+                },
+                comment: function(inspId, event) {
+                    var currentNode = event.currentTarget;
+                    this.issueComments[inspId]=currentNode.value;
+//                    console.log(this.issueComments);
+                },
+                submit: function() {
+//                   console.log(this.checkedEP);
+//                   console.log(this.checkedPP);
+//                   console.log(this.checkedTP);
+//                   console.log(this.checkedMP);
+
+                    var issueList = [];
+                    for(ep of this.checkedEP) {
+                        var issue = {"id": ep, "type": "EquipPrecaution", "comments":"未落实规定措施。"};
+                        if(isNotNull(this.issueComments[ep])) {
+                            issue.comments = this.issueComments[ep];
+                        }
+                        issueList.push(issue);
+                    }
+
+                    for(pp of this.checkedPP) {
+                        var issue = {"id": pp, "type": "PersonPrecaution", "comments":"未落实规定措施。"};
+                        if(isNotNull(this.issueComments[pp])) {
+                            issue.comments = this.issueComments[pp];
+                        }
+                        issueList.push(issue);
+                    }
+                    for(tp of this.checkedTP) {
+                        var issue = {"id": tp, "type": "TechPrecaution", "comments":"未落实规定措施。"};
+                        if(isNotNull(this.issueComments[tp])) {
+                            issue.comments = this.issueComments[tp];
+                        }
+                        issueList.push(issue);
+                    }
+                    for(mp of this.checkedMP) {
+                        var issue = {"id": mp, "type": "MindPrecaution", "comments":"未落实规定措施。"};
+                        if(isNotNull(this.issueComments[mp])) {
+                            issue.comments = this.issueComments[mp];
+                        }
+                        issueList.push(issue);
+                    }
+                    //console.log(issueList);
+                    var params = {
+                        "unitId_s": myUnit.id,
+                        "hySort_s": myUnit.s_Map.hySort_s,
+                        "hyType_s": myUnit.s_Map.hyType_s,
+                        "code_s": myUnit.s_Map.code_s,
+                        "inspector_s": '<@security.authentication property='principal.userDetail.legalman' htmlEscape='false' />',
+                        "userType_i": userType,
+                        "issueNum_i": issueList.length,
+                        "inspResult_s": JSON.stringify(issueList),
+                    };
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://' + changeAddr() + '/common/saveModel?className=InspRecord&checkUniq=N',
+                        async: false,
+                        data: params,
+                        success: function (data) {
+                            window.location.href = "${rc.contextPath}/placebase?unit=" + $("#unitId").val();
+                        }
+                    });
+                }
+            }
+        });
+
+        //列表手风琴缩放
+        var Accordion = function(el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.link');
+            //var links2 = this.el.find('.link2');
+            // Evento
+            links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            //links2.on('click', {el: this.el, multiple: this.multiple}, this.dropdown2)
+        }
+
+        Accordion.prototype.dropdown = function(e) {
+            var $el = e.data.el;
+            $this = $(this),
+                    $next = $this.next();
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        Accordion.prototype.dropdown2 = function(e) {
+            var $el = e.data.el;
+            $this = $(this),
+                    $next = $this.next();
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu2').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        var personP = new Accordion($('#personPrecaution'), false);
+        var equipP = new Accordion($('#equipPrecaution'), false);
+        var techP = new Accordion($('#techPrecaution'), false);
+        var mindP = new Accordion($('#mindPrecaution'), false);
+
+        $('img.lazy').lazyLoad();
+
+    })
+
+</script>
+</body>
+</html>

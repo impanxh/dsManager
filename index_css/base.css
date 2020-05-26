@@ -1,0 +1,69 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "microsoft yahei", Arial;
+}
+header,
+section {
+  width: 100%;
+}
+section {
+  position: relative;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+li {
+  list-style: none;
+}
+a {
+  background-color: transparent;
+  color: inherit;
+}
+a:focus {
+  color: inherit;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix_ {
+  display: inline-block;
+  
+}
+.clearfix:before{
+  clear: both;
+}	
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}

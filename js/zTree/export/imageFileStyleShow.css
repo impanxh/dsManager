@@ -1,0 +1,38 @@
+
+    .touchBtn {
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin: 0 auto;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        background-color: #425D7A;
+        cursor: pointer;
+    }
+    .imgsBox-tips {
+        border: 1px solid #ccc;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #ccc;
+    }
+
+    .imgsBox-child:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden
+    }
+
+    #imgsBox.imgsBox-child {
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #fileList .s-left{
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }

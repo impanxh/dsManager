@@ -1,0 +1,95 @@
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	top: 25%;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+	text-align: left;
+	padding-left: 20px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="number"] {
+	margin-bottom: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#btnDynamic {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#btnClicklogin {
+	margin-bottom: 10px;
+}
+#btnRelogin {
+	margin-bottom: 10px;
+}
+
+.beforeLogin {
+	overflow: hidden;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.fullscreen {
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}
+.fspic {
+	background: url(../images/fullscreen.jpg) center center no-repeat;
+	height: 100%;
+}
+
+.logoCon2{height:30px;}
+
+.searchL{ width:100%; background:#fff; position:relative;margin-right:50px;}
+.searchInput{width:70%;height:30px;margin-left:10px;}
+.searchText{ width:100%;height:30px;border:none; outline:none;}
+.hotWord{position:absolute;top:0;z-index:0;overflow:hidden;line-height:30px;left:40px;}
+.searchSelect{width:100%;position:absolute;z-index:10000000;top:30px;background:#fff;border:1px solid #144e9c;}
+.searchSelect ul{}
+.searchSelect ul li{width:100%;height:30px;line-height:30px;clear:both;border-bottom:1px dashed #eee;overflow:hidden;}
+.searchSelect ul li:last-child{border-bottom:none;}
+.searchImg{width:16px;height:16px;border-radius:2px;border:1px solid #fc4602;text-align:center;line-height:16px;color:#fc4602;margin-top:6px;margin-left:10px;display:block;}
+.searchImg2{width:16px;height:16px;border-radius:2px;border:1px solid #d5d5d5;text-align:center;line-height:16px;color:#d5d5d5;margin-top:6px;margin-left:10px;}
+.bdText_link{width:85%;height:30px;margin-left:40px;color:#8e8e8e;display:block;overflow:hidden;}
+.dh_close{padding:10px;background:#d5d5d5;height:15px;}
+.dh_close .bdText_link1{width:85%;display:block;color:#8e8e8e;}
+
+.searchR{width:50px;height:30px;background:#fff;position:absolute;right:0;}
+.searchR .searchBtn{width:50px;border:none;height:30px;margin:0 auto;background:url(../images/component/springcome.png) no-repeat;background-size:170px auto;border-left:1px solid #c2d64b;background-position:-75px -55px;}

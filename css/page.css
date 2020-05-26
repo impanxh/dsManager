@@ -1,0 +1,237 @@
+@charset "utf-8";
+/**
+ * CSS for Advertising page
+ * Created by Zhang Jie
+ * 2014/10/17
+ *
+*/
+
+* {padding:0;margin:0;}
+
+/* List Table */
+.List-Table table {background-color:#fff;border-collapse:collapse;border-spacing:0;border:1px solid #3BB3DA;table-layout:fixed;}
+.List-Table table tr {background-color:#f9f9f9;}
+.List-Table table tr:hover {background-color:#fff;}
+.List-Table table th {background-color:#3BB3DA;font-size:13px;font-weight:normal;line-height:35px;color:#fff;overflow:hidden;border:0;text-overflow:ellipsis;white-space:nowrap;}
+.List-Table table td {text-align:center;height:35px;border-top:1px solid #e7e7e7;}
+.List-Table table td a {color:#3BB3DA;text-decoration:none;}
+.List-Table table td a:hover {text-decoration:underline;}
+.List-Table table td div {height:30px;float:left;}
+.List-Table table td div a {line-height:30px;}
+.List-Table table td div a.edit {display:block;background:#fff url(images/list_table_edit.gif) no-repeat 0 0;line-height:28px;text-align:left;text-decoration:none;width:34px;height:28px;padding-left:30px;margin-right:7px;border:1px solid #cccecd;}
+.List-Table table td div a.edit:hover {border-color:#35b0d1;}
+.List-Table table td div a.del {display:block;background:#fff url(images/list_table_del.gif) no-repeat 0 0;line-height:28px;text-align:left;text-decoration:none;width:64px;height:28px;padding-left:30px;margin-right:7px;border:1px solid #cccecd;}
+.List-Table table td div a.del:hover {border-color:#35b0d1;}
+.List-Table .List-Pages {text-align:right;width:100%;padding:5px 0;margin-top:15px;}
+.List-Table .List-Pages a {line-height:16px;text-decoration:none;color:#222;background-color:#fff;padding:4px 9px;border:1px solid #dee0df;}
+.List-Table .List-Pages a:hover, .List-Table .List-Pages a.Active {border-color:#34afd0;color:#34afd0;}
+.List-Table table td.form {background-color:#fff;text-align:left;padding:0 20px;}
+.List-Table table td.form input {line-height:34px;width:250px;height:34px;padding:0 10px;border:1px solid #ccc;}
+
+
+/* Page Title */
+.Page-Title {height:38px;padding:0 5px;margin-bottom:20px;border-bottom:1px solid #eee;}
+.Page-Title span {font-size:18px;font-weight:bold;color:#3BB3DA;line-height:26px;}
+form.Form-Table .Form-Buttons {text-align:center;margin-top:30px;}
+form.Form-Table table td input.Input-Text {font-size:14px;line-height:21px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-serif,Verdana,'Trebuchet MS';width:500px;height:21px;padding:0;margin:0;border:0;margin-left: 10px;}
+.Form-Buttons button {background-color:#3BB3DA;color:#fff;font-size:14px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-serif,Verdana,'Trebuchet MS';line-height:37px;height:37px;padding:0 30px;margin:0;border:0;cursor:pointer;}
+.Form-Buttons button:hover {background-color:#3BB3DA;}
+
+/* jDialog */
+#jDialog {background-color:#fff;padding:40px;border:1px solid #3BB3DA;position:absolute;z-index: 19891120;}
+#jDialog .jDialog_Title {font-size:16px;font-weight:bold;color:#3BB3DA;line-height:19px;}
+#jDialog_Content {margin-top:10px;overflow:hidden;}
+#jDialog_Content .Page-Loading {height:32px;}
+#jDialog .jDialog_Buttons {text-align:center;margin-top:20px;}
+#jDialog .jDialog_Buttons button {background-color:#3BB3DA;color:#fff;font-size:14px;font-family:'Microsoft Yahei',Arial,Helvetica,sans-serif,Verdana,'Trebuchet MS';line-height:37px;height:37px;padding:0 30px;margin:0 20px;border:0;cursor:pointer;}
+#jDialog .jDialog_Buttons button:hover {background-color:#17bd9b;}
+#jDialog_Overlay {background-color:#000;position:fixed;top:0;left:0;width:100%;height:100%;padding:0;margin:0;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;}
+.selcs{
+border:1px solid #D1E9E9;	
+height: 35px;
+width: 120px;
+}
+.selcs1{
+border:1px solid #D1E9E9;	
+height: 35px;
+width: 150px;
+}
+.toolbar{float:left;}
+
+
+
+
+
+/* pagenation分页 */
+
+.pag_tbl{
+	width:99%;
+	text-align: right;
+	float: right;
+}
+
+
+
+
+#numpage ul li {
+	width:31px;
+	height: 28px;
+	line-height: 28px;
+	margin-left: 3px;
+	float: left;
+	font-size: 12px;
+	color: #3BB3DA;
+}
+
+
+#numpage ul li.text {
+	width:50px;
+	height:28px;
+	line-height:28px;
+	text-align: center;
+	color: #3BB3DA;
+}
+
+#numpage ul li.disabled {
+	width:50px;
+	height:28px;
+	line-height:31px;
+	text-align: center;
+	border: 1px solid #DDD;
+	color: #3BB3DA;
+}
+
+
+#numpage ul li a {
+	text-decoration: none;
+	display: block;
+	border: 1px solid #DDD;
+	color: #3BB3DA;
+}
+
+#numpage ul li a.number{
+	width:31px;
+	height:28px;
+	line-height:31px;
+	text-align: center;
+}
+
+#number ul li a.text{
+	width:31px;
+	height:28px;
+	line-height:31px;
+	text-align: center;
+}
+
+#numpage ul li a.select {
+	width:31px;
+	height:28px;
+	line-height:31px;
+	text-align: center;
+	background: #f5f5f5;
+	color: black;
+}
+
+#numpage ul li a.number:HOVER {
+	background: #f5f5f5;
+	color: black;
+}
+
+#numpage ul li a.text:HOVER {
+	background: #f5f5f5;
+	color: black;
+}
+
+#numpage ul li.textjs {
+	height: 28px;
+	line-height: 30px;
+	width: 220px;
+	text-align: left;
+	letter-spacing: 2px;
+	color: #3BB3DA;
+	vertical-align: bottom;
+}
+
+#numpage ul li.textjs span.currpage {
+	width: 40px;
+	float: left;
+	color: #3BB3DA;
+}
+
+#numpage ul li.textjs span.pagecount {
+	width: 50px;
+	float: left;
+	color: #3BB3DA;
+}
+
+#numpage ul li.textjs span.go {
+	margin-left: 5px;
+	cursor: pointer;
+	float: left;
+	color: #3BB3DA;
+}
+
+#numpage ul li.textjs span.skip {
+	width: 100px;
+	float: left;
+	color: #3BB3DA;
+}
+
+#numpage ul li.textjs input {
+	text-align: center;
+	width: 30px;
+	border: 1px solid #666;
+	/* float: left; */
+}
+
+.button_kind{
+	background-color: #3BB3DA;
+color: #fff;
+font-size: 16px;
+font-family: 'Microsoft Yahei',Arial,Helvetica,sans-serif,Verdana,'Trebuchet MS';
+line-height: 35px;
+height: 35px;
+margin-top: 5px;
+margin-right: 5px;
+border: 0;
+cursor: pointer;
+width: 100px;
+	
+}
+.button_kind:hover {background-color:#3BB3DA;}
+
+.inputdevice{
+	width:50px;
+	font-size:12px;
+	
+}
+
+.iwifi-ad-content {_width: 100%;background: #fff;padding: 13px 0;}
+.iwifi-ad-content .iwifi-ad-body {background-color:#fff;min-height: 600px;height: auto !important;margin: 0 auto;overflow:hidden;}
+.iwifi-ad-width {width: 100%;}
+.iwifi-ad-body textarea {border:1px;background:rgba(203, 231, 206, 1);font:12px/18px "Microsoft YaHei","ARIAL";color:#333;resize:none;width:100%;float:right;padding:10px 0 0 0;}
+.iwifi-ad-content .iwifi-ad-agreement {margin-top:5px}
+.iwifi-ad-content .iwifi-ad {width:100%;}
+.iwifi-ad-content .iwifi-btn {margin-top:15px;width:100%;}
+.btn-disabled {background-color: #ededed;border: 0 none;color: #999;cursor: default;font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif,Verdana,"Trebuchet MS";
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    margin: 0;
+    padding: 0 30px;}
+
+.joinsysbutton {
+    background-color: #1fa58b;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif,Verdana,"Trebuchet MS";
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    margin: 0;
+    padding: 0 30px;
+}
+.joinsysbutton:hover {
+    background-color: #17bd9b;
+}

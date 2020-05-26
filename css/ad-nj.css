@@ -1,0 +1,87 @@
+*{ margin:0; padding:0; list-style:none;}
+#divSmallBox{overflow:hidden;*display:inline;*zoom:1;width:10px;height:10px;margin:0 5px;border-radius:10px;background:#ffffff;}
+#playBox{ width:80%; height:44%; margin:20px auto; background:#333; position:absolute; overflow:hidden;top:15%;left:10%;solid 10px;}
+#playBox .oUlplay { width:100%; position:absolute; left:0; top:0;}
+#playBox .oUlplay li{ float:left;}
+#playBox .pre{ cursor:pointer; width:45px; height:45px; position:absolute; top:0; left:0; z-index:10;}
+#playBox .next{ cursor:pointer; width:45px; height:45px; position:absolute; top:0; right:0; z-index:10;}
+#playBox .smalltitle {width:1000px; height:10px; position:absolute; bottom:15px; z-index:10}
+#playBox .smalltitle ul{ width:120px; margin:0 auto;}
+#playBox .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox .smalltitle .thistitle{ background:#69aaec;}
+
+
+
+#playBox2{ width:80%; height:13.4%; margin:20px auto; background:#333; position:absolute; overflow:hidden;top:75%;left:10%; border: 2px #F0AD4E;}
+#playBox2 .oUlplay { width:99999px; position:absolute; left:0; top:0;}
+#playBox2 .oUlplay li{ float:left;}
+#playBox2 .pre{ cursor:pointer; width:45px; height:45px; background:url(../images/l.png) no-repeat; position:absolute; top:190px; left:10px; z-index:10;}
+#playBox2 .next{ cursor:pointer; width:45px; height:45px; background:url(../images/r.png) no-repeat; position:absolute; top:190px; right:10px; z-index:10;}
+#playBox2 .smalltitle {width:1000px; height:10px; position:absolute; bottom:15px; z-index:10}
+#playBox2 .smalltitle ul{ width:120px; margin:0 auto;}
+#playBox2 .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#playBox2 .smalltitle .thistitle{ background:#69aaec;}
+
+.advertise {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(136, 136, 136, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.advertise div {
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.advertise-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.advertise-time {
+    position: absolute;
+    top: 2%;
+    right: 18%;
+    width: 10%;
+    height: 5%;
+    border-radius: 8px 0 0 8px;
+	background: #444444;
+	opacity: 0.5;
+	color:#FFFFFF;
+	text-align: center;
+	line-height: 210%;
+	font-size: 90%;
+}
+
+.advertise-pass {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 13%;
+    height: 5%;
+    border-radius: 0 8px 8px 0px;
+	background: #444444;
+	opacity: 0.5;
+	color:#FFFFFF;
+	text-align: center;
+	line-height: 210%;
+	font-size: 90%;
+}
+
+.advertise-content img {
+    width: 95%;
+    height: 99%;
+}

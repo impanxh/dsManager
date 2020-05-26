@@ -1,0 +1,106 @@
+.container-12{
+	width: 100%;
+}
+.ls-10_sift{
+	float: left;
+	margin-left: 100px;
+	width: 100%;
+	margin-top: 5%;
+}
+
+.ls-10{
+	float: left;
+	margin-left: 10px;
+}
+.sift-box{
+	
+	font-size: 15px;
+	color: #333;
+	background-color: #fff;
+	
+}
+.sift-box .sift-item{
+	padding: 5px;
+	border-bottom: 1px solid #e3e3e3;
+	line-height: 30px;
+}
+.sift-box .sift-item:last-child {
+  
+}
+.sift-box .sift-item span{
+	float: left;
+	display: inline-block;
+	line-height: 28px;
+	padding-left: 5px;
+	width: 80px;
+	font-weight: 600;
+}
+#table_wrapper span{
+	font-weight: 600;
+}
+.sift-box .sift-item .sift-search{
+	float: left;
+}
+.sift-box .sift-item .sift-search input{
+	width: 363px;
+	box-shadow: none;
+	display: inline;
+	float: left;
+	margin: 0;
+	padding: 0 10px;
+	line-height: 37px;
+	height: 37px;
+	font-size: 14px;
+	font-weight: normal;
+	border: 1px solid #ccc;
+}
+.sift-box .sift-item .sift-search .btn-search{
+	display: block;
+	width: 50px;
+	height: 37px;
+	float: left;
+	border: 1px solid #ccc;
+	border-left: none;
+	background: url("../imgs/icon_search.png") no-repeat center #00bb89;
+}
+.sift-box .sift-item .sift-list{
+	float: left;
+  	margin-left: 0;
+}
+.sift-box .sift-item .sift-list .item{
+	color: #333;
+	padding: 0 6px;
+	display: inline-block;
+	margin-right: 10px;
+	padding-bottom: 1px;
+}
+.sift-box .sift-item .sift-list .item.active {
+	background: #00bb89;
+	color: #fff;
+	line-height: 20px;
+	padding: 0 6px;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 1px;
+}
+ .sift-list i{
+  font-style: normal;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: #666;
+  cursor: pointer;
+}
+
+.swift-bprice {
+    display: inline-block;
+    vertical-align: middle;
+    color: #F45C55;
+    font-size: 20px;
+    
+}
+
+.sales_remain{
+	font-weight: 600;
+	color: red;
+}

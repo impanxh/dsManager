@@ -1,0 +1,47 @@
+.pic-box {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #e0e0e0;
+	text-align: center
+}
+
+.middle-box {
+	width: 100%;
+	height: 105px;
+	overflow: hidden;
+	margin: 0 auto;
+	background: #e0e0e0;
+	text-align: center
+}
+
+.middle-box img {
+	width: 640px;
+	height: auto;
+	margin: 0 auto
+}
+
+.pic-box img {
+	width: 640px;
+	height: auto;
+	margin: 0 auto
+}
+
+@media screen and (max-width:640px) {
+	.pic-box {
+		width: 480px
+	}
+	.pic-box img {
+		width: 480px
+	}
+}
+
+@media screen and (max-width:480px) {
+	.pic-box {
+		width: 320px
+	}
+	.pic-box img {
+		width: 320px
+	}
+}
