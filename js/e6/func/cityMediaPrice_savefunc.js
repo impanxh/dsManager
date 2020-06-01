@@ -83,6 +83,11 @@ function provincechange(){
     }
     city.options[0].selected=true;
 }
+var qid = getParamFromUrl("id");
+
+
+
+
 $(function () {
     // 省份初始化
     init(); 
@@ -90,10 +95,40 @@ $(function () {
         if ($('#checkUniq').val() == 'N') {
             $('#uniqId_s').val(getUniqId());
         }
+
+
+        
+        var list = [];
+        $("#imgsBox1 > .imgs").each(function(i, item) {
+            var row = {
+                "imgName": $(this).attr('imgName'),
+                "imgUrl": $(this).attr('imgUrl')
+            };
+            list.push(row);
+        });
+       
+        list = JSON.stringify(list);
+      
+        $("#imgListTaoche").val(list);
+        
+
+
         $('#reportMsg').attr("action", "http://" + changeAddr() + "/api/saveModel");
         var c;
         ajaxForm("reportMsg", c, 'confirm');
     });
+
+    if(qid!=null && qid!=''){
+
+        var obj  =  queryById(qid,'R1_price')
+		if(isNotNull(obj)){
+			suffix_fileEdit(obj.imgListTaoche_s,'imgsBox1',1)
+			//suffix_ExFileEdit(obj.fileList_s,'fileBox',1)
+			   
+		}
+        
+        
+    }
 
     $('#b3_s,#b2_s').change(function () {
 

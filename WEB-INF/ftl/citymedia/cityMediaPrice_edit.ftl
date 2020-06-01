@@ -272,7 +272,23 @@ mail:impanxh#gmail.com
 
 			</div>
 			</@modelObject>
+				<input type="hidden" name="imgListTaoche_s" id="imgListTaoche" />
 		</form>
+
+			<div class="file-box">
+			<form id="imgForm1" method="post" enctype="multipart/form-data" >
+                <input class="file-btn" name="imgFile"
+					style="margin-top: -5px;" id="fileid1" type="file" href="javascript:void(0);"
+					onchange="uploadImgs(1)" />  上传相关图片
+			</form>
+            </div>
+
+			<div id="imgsBox1">
+            </div>
+
+
+
+
         <input type="hidden" id="_modelId" value="0">
 			<div class="withdrawInputs" style="text-align: center;">
             <span style="text-align: center; margin-left: 20px;padding-bottom: 10px;">

@@ -205,7 +205,18 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	<br>
 </div>
 
+ 						<div class="withdrawInputs">
+                            <div class="touchBtn">
+                                显示/隐藏图片信息
+                            </div>
+                            <div id="imgsBox" style="display:none;">
+                                <div class="imgsBox-tips">套车小样</div>
+                                <div id="imgListTaoche" class="imgsBox-child"></div>
 
+                                <div class="imgsBox-tips">文件列表</div>
+                                <div id="fileList" class="imgsBox-child"></div>
+                            </div>
+                        </div>
 
  
 
