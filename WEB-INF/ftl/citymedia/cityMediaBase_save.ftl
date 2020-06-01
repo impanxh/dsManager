@@ -46,13 +46,17 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 		<div class="withdrawInputs" id="baseinfoedit" style="width: 100%; ">
 			<div class="inputs" style="float: left;">
 		                 <div class="ui-form-item">
-							<label class="ui-label mt10">  地区</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a2_s"   id="a2_s">
+							<label class="ui-label mt10">  省份</label>
+                            <select data-is="isAmount isEnough" onchange="provincechange()" class="province validate[required]" name="a2_s" id="a2_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+                            <option>请选择省份</option>
+                            </select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
-							<label class="ui-label mt10">  县（市）</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a3_s"   id="a3_s">
+							<label class="ui-label mt10">  地区</label>
+                            <select data-is="isAmount isEnough" class="city validate[required]" name="a3_s" id="a3_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+                            <option>请选择地区</option>
+                            </select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -212,11 +216,11 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 		                </div>
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  备注</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a39_s"   id="a39_s">
+                            <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a39_s" id="a39_s"></textarea>
 		                </div>
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  收件地址</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a40_s"   id="a40_s">
+                            <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a40_s" id="a40_s"></textarea>
 		                </div>
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  排查人</label>

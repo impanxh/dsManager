@@ -47,12 +47,16 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 			<div class="inputs" style="float: left;">
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  省份</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b2_s"   id="b2_s">
+                            <select data-is="isAmount isEnough" onchange="provincechange()" class="province validate[required]" name="b2_s" id="b2_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+                            <option>请选择省份</option>
+                            </select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  地区</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b3_s"   id="b3_s">
+                            <select data-is="isAmount isEnough" class="city validate[required]" name="b3_s" id="b3_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+                            <option>请选择地区</option>
+                            </select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -67,7 +71,15 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  发布形式</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b6_s"   id="b6_s">
+                            <select data-is="isAmount isEnough" class="validate[required]" name="b6_s" id="b6_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+								<option value="双层全包">双层全包</option>
+								<option value="双层三侧">双层三侧</option>
+								<option value="双层两侧">双层两侧</option>
+								<option value="单层全包">单层全包</option>
+								<option value="单层半全包">单层半全包</option>
+								<option value="单层三侧">单层三侧</option>
+								<option value="单层两侧">单层两侧</option>
+							</select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -77,12 +89,18 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  线路</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b8_s"   id="b8_s">
+                            <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b8_s" id="b8_s"></textarea>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  车型</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b9_s"   id="b9_s">
+                            <select data-is="isAmount isEnough" class="validate[required]" name="b9_s" id="b9_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+								<option value="双层巴士">双层巴士</option>
+								<option value="单层巴士">单层巴士</option>
+								<option value="单层中巴">单层中巴</option>
+								<option value="单层小巴">单层小巴</option>
+							</select>
+
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -92,7 +110,12 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  最小投放周期</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b11_s"   id="b11_s">
+                            <select data-is="isAmount isEnough" class="validate[required]" name="b11_s" id="b11_s" autocomplete="off" disableautocomplete="" style="width: 220px; height: 35px;">
+								<option value="1个月">1个月</option>
+								<option value="3个月">3个月</option>
+								<option value="9个月">9个月</option>
+								<option value="12个月">12个月</option>
+							</select>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -166,7 +189,7 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 		                </div>
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  备注</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b27_s"   id="b27_s">
+                            <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b27_s" id="b27_s"></textarea>
 		                </div>
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  排查人</label>
