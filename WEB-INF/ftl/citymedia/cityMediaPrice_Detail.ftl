@@ -220,7 +220,15 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 
  
 
+<script type="text/javascript">
+  var id = getQueryString("id");
+ var obj = queryForObjectV3({ "filter[id]": id }, 'R1_price');//Use classname (name of table)
+                    if (isNotNull(obj)) { 
+                        file_imageShow(obj.imgListTaoche_s, 'imgListTaoche');
+					}
 
+
+  </script>
 
 
 
