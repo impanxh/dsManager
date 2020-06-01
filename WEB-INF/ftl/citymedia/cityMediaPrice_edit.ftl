@@ -82,8 +82,23 @@ mail:impanxh#gmail.com
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
+							<!--<label class="ui-label mt10">  发布形式</label>
+		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b6_s"   id="b6_s"  value="${(model.b6_s)!''}" >-->
+
 							<label class="ui-label mt10">  发布形式</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b6_s"   id="b6_s"  value="${(model.b6_s)!''}" >
+		                    <select class="ui-input validate[required]" type="text" name="b6_s" id="area_s" value="" >
+
+		                             <option value="双层全包"   <#if (((model.area_s)!'') == '双层全包' )>selected="selected"</#if> >双层全包</option>  
+		                             <option value="双层三侧"   <#if (((model.area_s)!'') == '双层三侧' )>selected="selected"</#if> >双层三侧</option>  
+		                             <option value="双层两侧"   <#if (((model.area_s)!'') == '双层两侧' )>selected="selected"</#if> >双层两侧</option>  
+		                             <option value="单层全包"   <#if (((model.area_s)!'') == '单层全包' )>selected="selected"</#if> >单层全包</option>  
+		                             <option value="单层半全包"   <#if (((model.area_s)!'') == '单层半全包' )>selected="selected"</#if> >单层半全包</option>  
+
+									 <option value="单层三侧"   <#if (((model.area_s)!'') == '单层三侧' )>selected="selected"</#if> >单层三侧</option>  
+		                             <option value="单层两侧"   <#if (((model.area_s)!'') == '单层两侧' )>selected="selected"</#if> >单层两侧</option>  
+                   		   </select>
+
+
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -97,8 +112,25 @@ mail:impanxh#gmail.com
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
+						 	<!--
 							<label class="ui-label mt10">  车型</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b9_s"   id="b9_s"  value="${(model.b9_s)!''}" >
+		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b9_s"   id="b9_s"  value="${(model.b9_s)!''}" >-->
+
+
+
+							<label class="ui-label mt10">  车型</label>
+                            <select data-is="isAmount isEnough" class="validate[required]" name="b9_s" id="b9_s" autocomplete="off" disableautocomplete="" style="width: 120px; height: 35px;">
+
+							 <option value="双层巴士"   <#if (((model.b9_s)!'') == '双层巴士' )>selected="selected"</#if> >双层巴士</option>  
+							 <option value="单层巴士"   <#if (((model.b9_s)!'') == '单层巴士' )>selected="selected"</#if> >单层巴士</option>  
+							 <option value="单层中巴"   <#if (((model.b9_s)!'') == '单层中巴' )>selected="selected"</#if> >单层中巴</option>  
+							 <option value="单层小巴"   <#if (((model.b9_s)!'') == '单层小巴' )>selected="selected"</#if> >单层小巴</option>  
+
+								 
+							</select>
+
+
+
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -108,12 +140,27 @@ mail:impanxh#gmail.com
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  最小投放周期</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b11_s"   id="b11_s"  value="${(model.b11_s)!''}" >
+		                 <!--   <input class="ui-input updateBusTotal validate[required]" type="text" name="b11_s"   id="b11_s"  value="${(model.b11_s)!''}" >-->
+
+							 <select data-is="isAmount isEnough" class="validate[required]" name="b11_s" id="b11_s" autocomplete="off" disableautocomplete="" style="width: 120px; height: 35px;">
+								
+								 <option value="1个月"   <#if (((model.b11_s)!'') == '1个月' )>selected="selected"</#if> >1个月</option>  
+								 <option value="3个月"   <#if (((model.b11_s)!'') == '3个月' )>selected="selected"</#if> >3个月</option>  
+								 <option value="9个月"   <#if (((model.b11_s)!'') == '9个月' )>selected="selected"</#if> >9个月</option>  
+								 <option value="12个月"   <#if (((model.b11_s)!'') == '12个月' )>selected="selected"</#if> >12个月</option>  
+
+								 
+							</select>
+
+
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  刊例价一个月（元/辆）</label>
 		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b12_s"   id="b12_s"  value="${(model.b12_s)!''}" >
+
+
+							
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
