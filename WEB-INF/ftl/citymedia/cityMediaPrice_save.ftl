@@ -89,7 +89,7 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  线路</label>
-                            <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b8_s" id="b8_s"></textarea>
+                            <textarea rows="12" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b8_s" id="b8_s"></textarea>
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -203,7 +203,29 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 			</div>
 
 			</div>
+			<input type="hidden" name="imgListTaoche_s" id="imgListTaoche" />
+			<input type="hidden" name="fileList_s" id="fileList" />
 		</form>
+
+			
+		
+		<#--  添加图片开始  -->
+			<div class="withdrawInputs" style="margin-top:7%;">
+			<div class="file-box">
+			<form id="imgForm1" method="post" enctype="multipart/form-data" >
+                <input class="file-btn" name="imgFile"
+					style="margin-top: -5px;" id="fileid1" type="file" href="javascript:void(0);"
+					onchange="uploadImgs(1)" />  上传图片
+			</form>
+            </div>
+
+			<div id="imgsBox1">
+            </div>
+            </br>
+
+
+
+
         <input type="hidden" id="_modelId" value="0">
 			<div class="withdrawInputs" style="text-align: center;">
             <span style="text-align: center; margin-left: 20px;padding-bottom: 10px;">

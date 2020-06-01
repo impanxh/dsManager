@@ -55,11 +55,21 @@ function init(){
     // 注意这里是要通过 id 获取元素，而不是通过 class 获取
     var province = document.getElementById('b2_s');
     //给选择框一个高度，可直接写进数据，不然要先创建dom元素option再录值
+
+
+    try{
+       
     province.length=provinces.length;
     for(var i=0;i<provinces.length;i++){
         province.options[i].text=provinces[i];
         province.options[i].value=provinces[i];
     }
+
+
+    }catch(e){}
+
+
+    
 }
 function provincechange(){
     var province = document.getElementById("b2_s");
@@ -83,5 +93,25 @@ $(function () {
         $('#reportMsg').attr("action", "http://" + changeAddr() + "/api/saveModel");
         var c;
         ajaxForm("reportMsg", c, 'confirm');
+    });
+
+    $('#b3_s,#b2_s').change(function () {
+
+        var f2 = $('#b2_s').val();
+        var f3 = $('#b3_s').val();
+
+        if(f2!='' && f3!='' ){
+            var obj = queryForObjectV3({"filter[a2_s_s]":f2,"filter[a3_s_s]":f3},'R1_base');
+            if(obj!=null){
+                $('#b4_s').val(obj.a4_s);
+                $('#b5_s').val(obj.a5_i);
+
+            }
+        }
+       
+       
+
+
+
     });
 });

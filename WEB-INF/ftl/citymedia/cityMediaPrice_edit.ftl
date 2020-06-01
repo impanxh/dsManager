@@ -63,12 +63,12 @@ mail:impanxh#gmail.com
 			<div class="inputs" style="float: left;">
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  省份</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b2_s"   id="b2_s"  value="${(model.b2_s)!''}" >
+		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b2_s" readonly=readonly   id="b2_s"  value="${(model.b2_s)!''}" >
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  地区</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b3_s"   id="b3_s"  value="${(model.b3_s)!''}" >
+		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b3_s" readonly=readonly  id="b3_s"  value="${(model.b3_s)!''}" >
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -88,14 +88,14 @@ mail:impanxh#gmail.com
 							<label class="ui-label mt10">  发布形式</label>
 		                    <select class="ui-input validate[required]" type="text" name="b6_s" id="area_s" value="" >
 
-		                             <option value="双层全包"   <#if (((model.area_s)!'') == '双层全包' )>selected="selected"</#if> >双层全包</option>  
-		                             <option value="双层三侧"   <#if (((model.area_s)!'') == '双层三侧' )>selected="selected"</#if> >双层三侧</option>  
-		                             <option value="双层两侧"   <#if (((model.area_s)!'') == '双层两侧' )>selected="selected"</#if> >双层两侧</option>  
-		                             <option value="单层全包"   <#if (((model.area_s)!'') == '单层全包' )>selected="selected"</#if> >单层全包</option>  
-		                             <option value="单层半全包"   <#if (((model.area_s)!'') == '单层半全包' )>selected="selected"</#if> >单层半全包</option>  
+		                             <option value="双层全包"   <#if (((model.b6_s)!'') == '双层全包' )>selected="selected"</#if> >双层全包</option>  
+		                             <option value="双层三侧"   <#if (((model.b6_s)!'') == '双层三侧' )>selected="selected"</#if> >双层三侧</option>  
+		                             <option value="双层两侧"   <#if (((model.b6_s)!'') == '双层两侧' )>selected="selected"</#if> >双层两侧</option>  
+		                             <option value="单层全包"   <#if (((model.b6_s)!'') == '单层全包' )>selected="selected"</#if> >单层全包</option>  
+		                             <option value="单层半全包"   <#if (((model.b6_s)!'') == '单层半全包' )>selected="selected"</#if> >单层半全包</option>  
 
-									 <option value="单层三侧"   <#if (((model.area_s)!'') == '单层三侧' )>selected="selected"</#if> >单层三侧</option>  
-		                             <option value="单层两侧"   <#if (((model.area_s)!'') == '单层两侧' )>selected="selected"</#if> >单层两侧</option>  
+									 <option value="单层三侧"   <#if (((model.b6_s)!'') == '单层三侧' )>selected="selected"</#if> >单层三侧</option>  
+		                             <option value="单层两侧"   <#if (((model.b6_s)!'') == '单层两侧' )>selected="selected"</#if> >单层两侧</option>  
                    		   </select>
 
 

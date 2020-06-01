@@ -32,11 +32,7 @@ let tooblar = `
 								<option value="单层两侧">单层两侧</option>
 							</select>
      
-      <span>线路级别&nbsp;&nbsp;</span>
-    <span><input id="b7_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
-     
-      <span>线路&nbsp;&nbsp;</span>
-    <span><input id="b8_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
+   
      
       <span>车型&nbsp;&nbsp;</span>
     
@@ -47,15 +43,8 @@ let tooblar = `
     <option value="单层巴士">单层巴士</option>
     <option value="单层中巴">单层中巴</option>
     <option value="单层小巴">单层小巴</option>
-  </select>
-
-
-     
-   <br><br>
-      <span>车长（米）&nbsp;&nbsp;</span>
-    <span><input id="b10_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
-     
-      <span>最小投放周期&nbsp;&nbsp;</span>
+    </select>
+    <span>最小投放周期&nbsp;&nbsp;</span>
     
 
     <select data-is="isAmount isEnough" class="validate[required]" name="b11_s_s" id="b11_s_s" autocomplete="off" disableautocomplete="" style="width: 120px; height: 35px;">
@@ -64,7 +53,22 @@ let tooblar = `
     <option value="3个月">3个月</option>
     <option value="9个月">9个月</option>
     <option value="12个月">12个月</option>
+  
   </select>
+
+  <span>线路级别&nbsp;&nbsp;</span>
+  <span><input id="b7_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    <span>线路&nbsp;&nbsp;</span>
+  <span><input id="b8_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+     
+   <br><br>
+      <span>车长（米）&nbsp;&nbsp;</span>
+    <span><input id="b10_s_s" value=""></span>&nbsp;&nbsp;&nbsp;&nbsp;
+     
+     
      
      <span>是否删除&nbsp;&nbsp;</span>
     <select class="ui-input ui-input-mini" id="isdelete_i_i" style="width:135px">

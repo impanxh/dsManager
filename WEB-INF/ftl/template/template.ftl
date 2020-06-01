@@ -23,6 +23,11 @@ security=JspTaglibs["/WEB-INF/tlds/security.tld"] />
 	src="${rc.contextPath}/js/validation/jquery.validationEngine-zh_CN.js"></script>
 <script type="text/javascript" language="javascript"
   	src="${rc.contextPath}/js/laytpl.js"></script>
+
+	  <script type="text/javascript" language="javascript"
+	src="/js/e6/func/fileApi_func.js?v=2&d=20200601170526"></script>
+
+	
 <!--
 <script type="text/javascript" language="javascript"
 	src="${rc.contextPath}/js/jquery.dataTables.js"></script>-->
