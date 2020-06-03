@@ -156,7 +156,17 @@ let coluns = [{
         { "data": "b5_s", },
         { "data": "b6_s", },
         { "data": "b7_s", },
-        { "data": "b8_s", },
+        { "data": "b8_s", "defaultContent": "", "render": function(data, type, row, meta) {
+            if(data){
+
+                if(data.length>20){
+                    return data.substring(0,20)+'...';
+                }else{
+                return data;
+                }
+                
+            }
+        }},
         { "data": "b9_s", },
         { "data": "b10_s", },
         { "data": "b11_s", },
@@ -185,7 +195,7 @@ let ajaxCallback = (json) => {
 };
 
 let ta = new DTable("table").withiDisplayLength(30).withSort(
-    [
+    [   
         [2, "desc"]
     ], [0]).
 preDrawCallback(tooblar, () => { //set tooblar and run fuction

@@ -7,11 +7,9 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","js/jquery-ui/jquery-ui.auto.co
 <link rel="stylesheet" type="text/css" href="${rc.contextPath}/css/basecss.css">
 <#assign security=JspTaglibs["/WEB-INF/tlds/security.tld"] />
 <!--this file is generator by tools author:pxh mail:impanxh#gmail.com--> 
-
 <input type="hidden" id="fromValue" value="list" />
 
 <input type="hidden" id="cid" />
-
 <div class="withdraw-wrap color-white-bg fn-clear">
 <div class="withdraw-title">
         公交车报价表 <input type="hidden" id="cid" /><a class="block-btn" onclick="addnewline('/-/cityMediaPrice_save');" href="javascript:void(0);">新建</a>
@@ -64,3 +62,4 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","js/jquery-ui/jquery-ui.auto.co
 <script type="text/javascript" language="javascript" src="/js/e6/func/cityMediaPrice_savefunc.js?t=${nowTag}"></script>
 </@frame.html>
 
+ <#--  style="width:200px !important;overflow: hidden;"  -->
