@@ -73,10 +73,26 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 											 <td>${(model.b7_s )!''}</td>
 										 
 										 </tr>
+
+
+										 	 <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>线路</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.b8_s )!''}</td>
+
+											</tr>
+
+
+
 										  <tr class="tableTr"> 
+										  	 <th>更新时间</th>
+										 
+											 <td>${(model.b29_dt?number_to_datetime)!''}</td>
+										 
+										<!--
 										 <th>线路</th>
 										 
-											 <td>${(model.b8_s )!''}</td>
+											 <td>${(model.b8_s )!''}</td>-->
 										 
 										   
 										 <th>车型</th>
@@ -177,23 +193,22 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 										 
 											 <td>${(model.b26_s )!''}</td>
 										 
-										   
-										 <th>备注</th>
-										 
-											 <td>${(model.b27_s )!''}</td>
-										 
-										 </tr>
-										  <tr class="tableTr"> 
-										 <th>排查人</th>
+										   <th>排查人</th>
 										 
 											 <td>${(model.b28_s )!''}</td>
 										 
-										   
-										 <th>更新时间</th>
-										 
-											 <td>${(model.b29_dt?number_to_datetime)!''}</td>
 										 
 										 </tr>
+										 
+
+										 <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>备注信息</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.b27_s )!''}</td>
+
+											</tr>
+
+
 										   
 									
 									  </tr>
