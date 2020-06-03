@@ -36,7 +36,7 @@ import { DTable } from 'DTable';
 			return json.content;
 		};
 
-		var ta = new _DTable.DTable("table").withiDisplayLength(30).withSort([[2, "desc"]], [0]).preDrawCallback(tooblar, function () {//set tooblar and run fuction
+		var ta = new DTable("table").withiDisplayLength(30).withSort([[2, "desc"]], [0]).preDrawCallback(tooblar, function () {//set tooblar and run fuction
 
 		}).preAjaxReduce(ajaxCallback).withAjax("R1_base", function () {
 			//filter
