@@ -76,12 +76,14 @@ function provincechange(){
     var num = province.selectedIndex; // 选中option索引
     var city = document.getElementById('b3_s');
     var citystemp=citys[num];
+    try{
     city.length=citystemp.length;
     for(var i=0;i<citystemp.length;i++){
         city.options[i].text=citystemp[i];
         city.options[i].value=citystemp[i];
     }
     city.options[0].selected=true;
+    }catch(e){}
 }
 $(function () {
     // 省份初始化
