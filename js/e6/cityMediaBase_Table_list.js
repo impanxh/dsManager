@@ -1,6 +1,6 @@
 import { DTable } from 'DTable';
-var provinces = ['请选择省份','北京市','上海市','天津市','重庆市','河北省','山西省','内蒙古省','辽宁省','吉林省','黑龙江省','江苏省','浙江省','安徽省','福建省','江西省','山东省','河南省','湖北省','湖南省','广东省','广西省','海南省','四川省','贵州省','云南省','西藏省','陕西省','甘肃省','宁夏省','青海省','新疆省','香港','澳门','台湾'];
-var citys = [['请选择城市'],
+var provinces = ['','北京市','上海市','天津市','重庆市','河北省','山西省','内蒙古省','辽宁省','吉林省','黑龙江省','江苏省','浙江省','安徽省','福建省','江西省','山东省','河南省','湖北省','湖南省','广东省','广西省','海南省','四川省','贵州省','云南省','西藏省','陕西省','甘肃省','宁夏省','青海省','新疆省','香港','澳门','台湾'];
+var citys = [[''],
     ["东城区", "西城区", "崇文区", "宣武区", "朝阳区", "丰台区", "石景山区", "海淀区", "门头沟区", "房山区", "通州区", "顺义区", "昌平区", "大兴区", "怀柔区", "平谷区", "密云县", "延庆县"],
     ["黄浦区", "卢湾区", "徐汇区", "长宁区", "静安区", "普陀区", "虹口区", "杨浦区", "闵行区", "宝山区", "嘉定区", "浦东新区", "金山区", "松江区", "青浦区", "南汇区", "奉贤区", "崇明县"],
     ["和平区", "河东区", "河西区", "南开区", "河北区", "红桥区", "塘沽区", "汉沽区", "大港区", "东丽区", "西青区", "津南区", "北辰区", "武清区", "宝坻区", "宁河县", "静海县", "蓟县"],
@@ -112,6 +112,9 @@ var citys = [['请选择城市'],
 		ta.withInitComplete(function () {
 			//set initcomplete
 			$('#a2_s_s').change(function () {
+                if($("#a2_s_s").val()==''){
+                    $('#a3_s_s').val('')
+                } 
 				ta.fndraw();
 			});
 			$('#a3_s_s').change(function () {
@@ -186,7 +189,7 @@ var citys = [['请选择城市'],
             //给选择框一个高度，可直接写进数据，不然要先创建dom元素option再录值
             try{
             province.length=provinces.length;
-            for(var i=0;i<provinces.length;i++){
+            for(var i=1;i<provinces.length;i++){
                 province.options[i].text=provinces[i];
                 province.options[i].value=provinces[i];
             }
@@ -199,7 +202,7 @@ var citys = [['请选择城市'],
             var citystemp=citys[num];
             try{
             city.length=citystemp.length;
-            for(var i=0;i<citystemp.length;i++){
+            for(var i=1;i<citystemp.length;i++){
                 city.options[i].text=citystemp[i];
                 city.options[i].value=citystemp[i];
             }
