@@ -86,7 +86,11 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  联系情况</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a9_s"   id="a9_s">
+
+							 <textarea rows="12" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a9_s" id="a9_s"></textarea>
+
+
+		                    
 		                </div>
 	          		 
 		                 <div class="ui-form-item">

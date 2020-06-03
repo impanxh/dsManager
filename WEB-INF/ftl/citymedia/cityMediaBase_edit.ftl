@@ -98,7 +98,8 @@ mail:impanxh#gmail.com
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  联系情况</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a9_s"   id="a9_s"  value="${(model.a9_s)!''}" >
+							 <textarea rows="12" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a9_s" id="a9_s">${(model.a9_s)!''}</textarea>
+		                    
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -257,13 +258,15 @@ mail:impanxh#gmail.com
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  备注</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a39_s"   id="a39_s"  value="${(model.a39_s)!''}" >
+		                    
+							 <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a39_s" id="a39_s">${(model.a39_s)!''}</textarea>
 		                </div>
 	          		 
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  收件地址</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="a40_s"   id="a40_s"  value="${(model.a40_s)!''}" >
+		                    
+							 <textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="a40_s" id="a40_s">${(model.a40_s)!''}</textarea>
 		                </div>
 	          		 
 	          		 

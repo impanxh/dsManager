@@ -69,7 +69,42 @@ var citys = [[''],
        let f = data[0];
        return line_emun[f];
    } },*/
-		{ "data": "a2_s" }, { "data": "a3_s" }, { "data": "a4_s" }, { "data": "a5_i" }, { "data": "a6_s" }, { "data": "a7_s" }, { "data": "a8_s" }, { "data": "a9_s" }, { "data": "a10_s" }, { "data": "a11_s" }, { "data": "a12_s" }, { "data": "a13_s" }, { "data": "a14_s" }, { "data": "a15_s" }, { "data": "a16_s" }, { "data": "a17_s" }, { "data": "a18_s" }, { "data": "a19_s" }, { "data": "a20_s" }, { "data": "a21_s" }, { "data": "a22_s" }, { "data": "a23_s" }, { "data": "a24_s" }, { "data": "a25_s" }, { "data": "a26_s" }, { "data": "a27_s" }, { "data": "a28_s" }, { "data": "a29_s" }, { "data": "a30_d" }, { "data": "a31_s" }, { "data": "a32_d" }, { "data": "a33_s" }, { "data": "a34_s" }, { "data": "a35_s" }, { "data": "a39_s" }, { "data": "a40_s" }, { "data": "a41_s" }, { "data": "a42_dt", "format": "yyyy-MM-dd" }];
+		{ "data": "a2_s" }, { "data": "a3_s" }, { "data": "a4_s" }, { "data": "a5_i" }, { "data": "a6_s" }, { "data": "a7_s" }, 
+		{ "data": "a8_s" }, { "data": "a9_s", "render": function(data, type, row, meta) {
+            if(data){
+
+                if(data.length>20){
+                    return data.substring(0,20)+'...';
+                }else{
+                return data;
+                }
+                
+            }
+        } },
+		{ "data": "a10_s" }, { "data": "a11_s" }, { "data": "a12_s" }, { "data": "a13_s" }, { "data": "a14_s" }, { "data": "a15_s" }, { "data": "a16_s" }, { "data": "a17_s" }, { "data": "a18_s" }, { "data": "a19_s" }, { "data": "a20_s" }, { "data": "a21_s" }, { "data": "a22_s" }, { "data": "a23_s" }, { "data": "a24_s" }, { "data": "a25_s" }, { "data": "a26_s" }, { "data": "a27_s" }, { "data": "a28_s" }, { "data": "a29_s" }, { "data": "a30_d" }, { "data": "a31_s" }, { "data": "a32_d" }, { "data": "a33_s" }, { "data": "a34_s" }, { "data": "a35_s" },
+		
+		
+		{ "data": "a39_s", "render": function(data, type, row, meta) {
+            if(data){
+
+                if(data.length>20){
+                    return data.substring(0,20)+'...';
+                }else{
+                return data;
+                }
+                
+            }
+        }}, { "data": "a40_s" , "render": function(data, type, row, meta) {
+            if(data){
+
+                if(data.length>20){
+                    return data.substring(0,20)+'...';
+                }else{
+                return data;
+                }
+                
+            }
+        }}, { "data": "a41_s" }, { "data": "a42_dt", "format": "yyyy-MM-dd" }];
 
 		var ajaxCallback = function ajaxCallback(json) {
 			return json.content;

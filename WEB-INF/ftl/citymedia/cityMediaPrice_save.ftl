@@ -1,4 +1,4 @@
-<#import "../template/template.ftl" as frame> <#global menu="基础信息"><@frame.html title="基础信息"
+<#import "../template/template.ftl" as frame> <#global menu="公交车报价表"><@frame.html title="公交车报价表"
 
 js=["js/jquery-ui/jquery-ui.js","js/jquery-dateFormat.js",
 "js/jquery-ui/jquery-ui.auto.complete.js","js/datepicker.js","js/SQ.js?t=123","js/jquery.cookie.js","js/jquery-dataTables-checkboxSelect.js","js/jquery-dataTables-fnCounterColumns.js",
@@ -32,7 +32,7 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 </style>
 <div id="">
 	<div class="p20bs color-white-bg border-ec">
-		<div class="withdraw-title">基础信息</div>
+		<div class="withdraw-title">公交车报价表</div>
 		<form data-name="withdraw" name="reportMsg" id="reportMsg" class="ui-form"
 		method="post"
 		enctype="multipart/form-data">

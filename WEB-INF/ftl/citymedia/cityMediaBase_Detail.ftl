@@ -226,18 +226,8 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 											 <td>${(model.a35_s )!''}</td>
 										 
 										 </tr>
-										  <tr class="tableTr"> 
-										 <th>备注</th>
 										 
-											 <td>${(model.a39_s )!''}</td>
-										 
-										   
-										 <th>收件地址</th>
-										 
-											 <td>${(model.a40_s )!''}</td>
-										 
-										 </tr>
-										  <tr class="tableTr"> 
+							 <tr class="tableTr"> 
 										 <th>排查人</th>
 										 
 											 <td>${(model.a41_s )!''}</td>
@@ -248,6 +238,24 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 											 <td>${(model.a42_dt?number_to_datetime)!''}</td>
 										 
 										 </tr>
+
+										   <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>备注</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.a39_s )!''}</td>
+
+											</tr>
+
+											  <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>收件地址</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.a40_s )!''}</td>
+
+											</tr>
+
+
+ 
+										 
 										   
 									
 									  </tr>

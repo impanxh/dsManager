@@ -185,7 +185,17 @@ let coluns = [{
         { "data": "b24_s", },
         { "data": "b25_s", },
         { "data": "b26_s", },
-        { "data": "b27_s", },
+        { "data": "b27_s", "render": function(data, type, row, meta) {
+            if(data){
+
+                if(data.length>20){
+                    return data.substring(0,20)+'...';
+                }else{
+                return data;
+                }
+                
+            }
+        } },
         { "data": "b28_s", },
         { "data": "b29_dt", "format": "yyyy-MM-dd" },
 ];

@@ -108,7 +108,8 @@ mail:impanxh#gmail.com
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  线路</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b8_s"   id="b8_s"  value="${(model.b8_s)!''}" >
+							<textarea rows="12" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b8_s" id="b8_s">${(model.b8_s)!''}</textarea>
+		                    
 		                </div>
 	          		 
 		                 <div class="ui-form-item">
@@ -252,7 +253,8 @@ mail:impanxh#gmail.com
 	          		 
 		                 <div class="ui-form-item">
 							<label class="ui-label mt10">  备注</label>
-		                    <input class="ui-input updateBusTotal validate[required]" type="text" name="b27_s"   id="b27_s"  value="${(model.b27_s)!''}" >
+							<textarea rows="4" cols="30" data-is="isAmount isEnough validate[required]" style="resize: none;" name="b27_s" id="b27_s">${(model.b27_s)!''}</textarea>
+		                    
 		                </div>
 	          		 
 	          		 
