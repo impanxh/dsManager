@@ -215,13 +215,16 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 			<form id="imgForm1" method="post" enctype="multipart/form-data" >
                 <input class="file-btn" name="imgFile"
 					style="margin-top: -5px;" id="fileid1" type="file" href="javascript:void(0);"
-					onchange="uploadImgs(1)" />  上传图片
+					onchange="uploadImgs(1)" />  上传相关图片
 			</form>
             </div>
 
 			<div id="imgsBox1">
             </div>
             </br>
+
+
+
 
 
 

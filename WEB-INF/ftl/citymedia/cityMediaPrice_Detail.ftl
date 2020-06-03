@@ -6,10 +6,11 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 
 
 <#assign security=JspTaglibs["/WEB-INF/tlds/security.tld"] />
-
+ 
 <link rel="stylesheet" type="text/css" href="${rc.contextPath}/css/basecss.css">
 <script type="text/javascript" language="javascript" src="/js/export/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/js/export/buttons.dataTables.min.css">
+ <link rel="stylesheet" type="text/css" href="/js/export/imageFileStyleShow.css">
 <script type="text/javascript" language="javascript" src="/js/export/dataTables.buttons.min.js"></script>
 <script type="text/javascript" language="javascript" src="/js/export/jszip.min.js"></script>
 <script type="text/javascript" language="javascript" src="/js/export/buttons.html5.min.js"> </script>
@@ -72,10 +73,26 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 											 <td>${(model.b7_s )!''}</td>
 										 
 										 </tr>
+
+
+										 	 <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>线路</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.b8_s )!''}</td>
+
+											</tr>
+
+
+
 										  <tr class="tableTr"> 
+										  	 <th>更新时间</th>
+										 
+											 <td>${(model.b29_dt?number_to_datetime)!''}</td>
+										 
+										<!--
 										 <th>线路</th>
 										 
-											 <td>${(model.b8_s )!''}</td>
+											 <td>${(model.b8_s )!''}</td>-->
 										 
 										   
 										 <th>车型</th>
@@ -176,23 +193,22 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 										 
 											 <td>${(model.b26_s )!''}</td>
 										 
-										   
-										 <th>备注</th>
-										 
-											 <td>${(model.b27_s )!''}</td>
-										 
-										 </tr>
-										  <tr class="tableTr"> 
-										 <th>排查人</th>
+										   <th>排查人</th>
 										 
 											 <td>${(model.b28_s )!''}</td>
 										 
-										   
-										 <th>更新时间</th>
-										 
-											 <td>${(model.b29_dt?number_to_datetime)!''}</td>
 										 
 										 </tr>
+										 
+
+										 <tr id="yewubz" class="tableTr" style="height:80px;">
+												<th>备注信息</th>
+
+												<td id="ts" colspan="3" class="break" width="861px">${(model.b27_s )!''}</td>
+
+											</tr>
+
+
 										   
 									
 									  </tr>
@@ -205,11 +221,30 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 	<br>
 </div>
 
+ 						<div class="withdrawInputs">
+                            <div class="touchBtn">
+                                显示/隐藏图片信息
+                            </div>
+                            <div id="imgsBox" style="display:none;">
+                                <div class="imgsBox-tips">相关照片</div>
+                                <div id="imgListTaoche" class="imgsBox-child"></div>
 
+                               <!-- <div class="imgsBox-tips">文件列表</div>
+                                <div id="fileList" class="imgsBox-child"></div>-->
+                            </div>
+                        </div>
 
  
 
+<script type="text/javascript">
+  var id = getQueryString("id");
+ var obj = queryForObjectV3({ "filter[id]": id }, 'R1_price');//Use classname (name of table)
+                    if (isNotNull(obj)) { 
+                        file_imageShow(obj.imgListTaoche_s, 'imgListTaoche');
+					}
 
+
+  </script>
 
 
 

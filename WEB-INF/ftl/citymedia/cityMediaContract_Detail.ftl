@@ -8,6 +8,8 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 <#assign security=JspTaglibs["/WEB-INF/tlds/security.tld"] />
 
 <link rel="stylesheet" type="text/css" href="${rc.contextPath}/css/basecss.css">
+<link rel="stylesheet" type="text/css" href="/js/export/imageFileStyleShow.css">
+
 <script type="text/javascript" language="javascript" src="/js/export/jquery.dataTables.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/js/export/buttons.dataTables.min.css">
 <script type="text/javascript" language="javascript" src="/js/export/dataTables.buttons.min.js"></script>
@@ -262,6 +264,33 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 
 
 
+ 						<div class="withdrawInputs">
+                            <div class="touchBtn">
+                                显示/隐藏图片信息
+                            </div>
+                            <div id="imgsBox" style="display:none;">
+                                <div class="imgsBox-tips">资质证明</div>
+                                <div id="img1List" class="imgsBox-child"></div>
+
+                               <div class="imgsBox-tips">授权文件</div>
+                                <div id="img2List" class="imgsBox-child"></div>
+                            </div>
+                        </div>
+
+
+
+
+<script type="text/javascript">
+  var id = getQueryString("id");
+ var obj = queryForObjectV3({ "filter[id]": id }, 'R1_contract');//Use classname (name of table)
+                    if (isNotNull(obj)) { 
+                        file_imageShow(obj.img1List_s, 'img1List');
+						file_imageShow(obj.img2List_s, 'img2List');
+
+					}
+
+
+  </script>
  
 
 

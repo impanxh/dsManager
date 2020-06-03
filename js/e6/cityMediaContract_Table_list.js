@@ -1,17 +1,4 @@
-(function (global, factory) {
-	if (typeof define === "function" && define.amd) {
-		define(["DTable"], factory);
-	} else if (typeof exports !== "undefined") {
-		factory(require("DTable"));
-	} else {
-		var mod = {
-			exports: {}
-		};
-		factory(global.DTable);
-		global.cityMediaContract_Table_list = mod.exports;
-	}
-})(this, function (_DTable) {
-	"use strict";
+import { DTable } from 'DTable';
 
 	//set query tooblar
 	var tooblar = "\n <div>\n  \t     <span>\u5BA2\u6237&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c1_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u7701&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c2_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u57CE\u5E02\u3010\u5E02\u3001\u53BF\u3011&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c3_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u5408\u540C\u6027\u8D28&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c4_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t<br><br>\n\t     <span>\u5408\u540C&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c11_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u516C\u53F8\u540D\u79F0&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c5_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u6536\u4EF6\u5730\u5740&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c6_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u8054\u7CFB\u4EBA&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c7_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t<br><br>\n\t     <span>\u7535\u8BDD&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c8_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u624B\u673A&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c9_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u8F66\u724C/\u8DEF\u7EBF&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c35_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u5907\u6CE8&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c36_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t<br><br>\n\t     <span>\u5F55\u5165\u4EBA&nbsp;&nbsp;</span>\n\t\t <span><input id=\"c37_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t\t<span>\u662F\u5426\u5220\u9664&nbsp;&nbsp;</span>\n\t\t <select class=\"ui-input ui-input-mini\" id=\"isdelete_i_i\" style=\"width:135px\">\n\t\t <option value=\"\" >\u6240\u6709</option>\n\t\t <option value=\"0\" selected=\"selected\">\u5426</option>   \n\t\t <option value=\"1\">\u662F</option>\n\t\t </select>&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t \n </div>";
@@ -123,4 +110,3 @@
 	// this file is generator by tools
 
 	//default sort 2 ,notsort-field 1,6
-});

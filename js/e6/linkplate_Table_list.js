@@ -1,17 +1,4 @@
-(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["DTable"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("DTable"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.DTable);
-    global.linkplate_Table_list = mod.exports;
-  }
-})(this, function (_DTable) {
-  "use strict";
+
 
   //set query tooblar
   var tooblar = "\n <div>\n  \t     <span>\u6240\u5C5E\u7EBF\u8DEF&nbsp;&nbsp;</span>\n\t\t <span><input id=\"lineName_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u8F66\u53F7&nbsp;&nbsp;</span>\n\t\t <span><input id=\"serianumber_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u724C\u7167\u53F7&nbsp;&nbsp;</span>\n\t\t <span><input id=\"plateNumber_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u4E0A\u520A\u5185\u5BB9&nbsp;&nbsp;</span>\n\t\t <span><input id=\"adcontext_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t<br><br>\n\t     <span>\u8F66\u578B&nbsp;&nbsp;</span>\n\t\t <span><input id=\"model_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t\t <span>\u6240\u5C5E\u516C\u53F8&nbsp;&nbsp;</span>\n\t\t <select class=\"ui-input ui-input-mini\" id=\"company_s_s\" style=\"width:135px\">\n\t\t <option value=\"\" selected=\"selected\">\u6240\u6709</option>\n\t\t    <option value=\"\u5BA2\u4E00\">\u5BA2\u4E00</option>   \n\t\t    <option value=\"\u5BA2\u4E00\">\u5BA2\u4E00</option>   \n\t\t    <option value=\"\u5BA2\u4E09\">\u5BA2\u4E09</option>   \n\t\t    <option value=\"\u5BA2\u56DB\">\u5BA2\u56DB</option>   \n\t\t    <option value=\"\u5BA2\u4E5D\">\u5BA2\u4E5D</option>   \n\t\t </select>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t\t <span>\u8F66\u8F86\u6027\u8D28&nbsp;&nbsp;</span>\n\t\t <select class=\"ui-input ui-input-mini\" id=\"type_s_s\" style=\"width:135px\">\n\t\t <option value=\"\" selected=\"selected\">\u6240\u6709</option>\n\t\t    <option value=\"\u5927\u706F\u7247\">\u5927\u706F\u7247</option>   \n\t\t    <option value=\"\u6302\u677F\">\u6302\u677F</option>   \n\t\t    <option value=\"\u6302\u677F\u8D34\">\u6302\u677F\u8D34</option>   \n\t\t    <option value=\"\u5185\u5305\u8F66\">\u5185\u5305\u8F66</option>   \n\t\t    <option value=\"\u672A\u88C5\u677F\">\u672A\u88C5\u677F</option>   \n\t\t </select>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t\t<span>\u662F\u5426\u5220\u9664&nbsp;&nbsp;</span>\n\t\t <select class=\"ui-input ui-input-mini\" id=\"isdelete_i_i\" style=\"width:135px\">\n\t\t <option value=\"\" selected=\"selected\">\u6240\u6709</option>\n\t\t <option value=\"0\">\u5426</option>   \n\t\t <option value=\"1\">\u662F</option>\n\t\t </select>&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t \n </div>";
@@ -99,4 +86,3 @@
   // this file is generator by tools
 
   //default sort 2 ,notsort-field 1,6
-});

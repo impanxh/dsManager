@@ -220,7 +220,41 @@ css=["css/sift.css","js/jquery-ui/jquery-ui.css","css/uploadprogess.css","css/jq
 			</div>
 
 			</div>
+
+			<input type="hidden" name="img1List_s" id="img1ListId" />
+			<input type="hidden" name="img2List_s" id="img2ListId" />
+
+
 		</form>
+
+		<#--  添加图片开始  -->
+			<div class="withdrawInputs" style="margin-top:7%;">
+			<div class="file-box">
+			<form id="imgForm1" method="post" enctype="multipart/form-data" >
+                <input class="file-btn" name="imgFile"
+					style="margin-top: -5px;" id="fileid1" type="file" href="javascript:void(0);"
+					onchange="uploadImgs(1)" />  资质证明
+			</form>
+            </div>
+
+			<div id="imgsBox1">
+            </div>
+            </br>
+
+			 <div class="file-box">
+                <form id="imgForm2" method="post" enctype="multipart/form-data" >
+                    <input class="file-btn" name="imgFile" style="margin-top: -5px;" id="fileid2" 
+                    type="file" href="javascript:void(0);" onchange="uploadImgs('2')" />  授权文件 
+                </form>
+            </div>
+            <div id="imgsBox2">
+            </div>
+
+
+
+
+
+
         <input type="hidden" id="_modelId" value="0">
 			<div class="withdrawInputs" style="text-align: center;">
             <span style="text-align: center; margin-left: 20px;padding-bottom: 10px;">

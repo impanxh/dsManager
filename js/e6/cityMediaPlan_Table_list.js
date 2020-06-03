@@ -1,17 +1,4 @@
-(function (global, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["DTable"], factory);
-  } else if (typeof exports !== "undefined") {
-    factory(require("DTable"));
-  } else {
-    var mod = {
-      exports: {}
-    };
-    factory(global.DTable);
-    global.cityMediaPlan_Table_list = mod.exports;
-  }
-})(this, function (_DTable) {
-  "use strict";
+import { DTable } from 'DTable';
 
   //set query tooblar
   var tooblar = "\n <div>\n  \t     <span>\u5BA2\u6237&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d1_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u7701\u4EFD&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d2_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u53BF\uFF08\u5E02\uFF09&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d3_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u5408\u540C\u6027\u8D28&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d4_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t<br><br>\n\t     <span>\u8054\u7CFB\u4EBA&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d5_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u516C\u53F8\u540D\u79F0&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d6_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u94F6\u884C&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d7_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n\t     <span>\u5F55\u5165\u4EBA&nbsp;&nbsp;</span>\n\t\t <span><input id=\"d20_s_s\" value=\"\"></span>&nbsp;&nbsp;&nbsp;&nbsp;\n\t    \n  \t\t<span>\u662F\u5426\u5220\u9664&nbsp;&nbsp;</span>\n\t\t <select class=\"ui-input ui-input-mini\" id=\"isdelete_i_i\" style=\"width:135px\">\n\t\t <option value=\"\" >\u6240\u6709</option>\n\t\t <option value=\"0\" selected=\"selected\">\u5426</option>   \n\t\t <option value=\"1\">\u662F</option>\n\t\t </select>&nbsp;&nbsp;&nbsp;&nbsp;\n\t\t \n </div>";
@@ -103,4 +90,3 @@
   // this file is generator by tools
 
   //default sort 2 ,notsort-field 1,6
-});
