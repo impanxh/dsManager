@@ -57,11 +57,13 @@ function init(){
     // 注意这里是要通过 id 获取元素，而不是通过 class 获取
     var province = document.getElementById('a2_s');
     //给选择框一个高度，可直接写进数据，不然要先创建dom元素option再录值
+    try{
     province.length=provinces.length;
     for(var i=0;i<provinces.length;i++){
         province.options[i].text=provinces[i];
         province.options[i].value=provinces[i];
     }
+    }catch(e){}
 }
 function provincechange(){
     var province = document.getElementById("a2_s");
