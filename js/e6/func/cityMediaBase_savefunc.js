@@ -83,7 +83,7 @@ $(function () {
     // 省份初始化
     init(); 
     $('#subutton').on("click", function (ev) {
-        var a2s=$('#a2_s').val(),  a3s=$('#a3s').val()
+        var a2s=$('#a2_s').val(),  a3s=$('#a3_s').val()
         
         if(isNull(a2s) || isNull(a3s)  || a2s.indexOf("请选择")!=-1  || a3s.indexOf("请选择")!=-1){
 
